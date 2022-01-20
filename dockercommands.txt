@@ -1,0 +1,399 @@
+Docker
+=========================================================
+
+C:\Users\Sree>docker run -dt redis
+824d93851e09e61de6d57f4d40d78ac3ebae80b68e31347e0a07ae80e0b322c5
+
+C:\Users\Sree>docker -v
+Docker version 20.10.11, build dea9396
+C:\Users\Sree>docker images
+REPOSITORY                           TAG                                                     IMAGE ID       CREATED        SIZE
+getting-started                      latest                                                  8c03c4d4496b   8 days ago     454MB
+sree9818/start                       latest                                                  8c03c4d4496b   8 days ago     454MB
+sree9818/demo-started                latest                                                  58b244072d68   8 days ago     454MB
+new-started                          latest                                                  c916dee0c24b   2 weeks ago    403MB
+sree9818/getting-started             latest                                                  c916dee0c24b   2 weeks ago    403MB
+sree9818/new-started                 latest                                                  c916dee0c24b   2 weeks ago    403MB
+<none>                               <none>                                                  cfa5689bf89d   2 weeks ago    403MB
+mysql                                5.7                                                     c20987f18b13   2 weeks ago    448MB
+node                                 12-alpine                                               106bb94759ad   3 weeks ago    89.5MB
+redis                                latest                                                  aea9b698d7d1   5 weeks ago    113MB
+docker/getting-started               latest                                                  26d80cd96d69   5 weeks ago    28.5MB
+alpine                               latest                                                  c059bfaa849c   6 weeks ago    5.59MB
+nicolaka/netshoot                    latest                                                  f4c8dceca780   7 weeks ago    432MB
+docker/desktop-kubernetes            kubernetes-v1.22.4-cni-v0.8.5-critools-v1.17.0-debian   493a106d3678   7 weeks ago    294MB
+k8s.gcr.io/kube-apiserver            v1.22.4                                                 8a5cc299272d   7 weeks ago    128MB
+k8s.gcr.io/kube-controller-manager   v1.22.4                                                 0ce02f92d3e4   7 weeks ago    122MB
+k8s.gcr.io/kube-scheduler            v1.22.4                                                 721ba97f54a6   7 weeks ago    52.7MB
+k8s.gcr.io/kube-proxy                v1.22.4                                                 edeff87e4802   7 weeks ago    104MB
+ubuntu                               latest                                                  ba6acccedd29   2 months ago   72.8MB
+k8s.gcr.io/etcd                      3.5.0-0                                                 004811815584   6 months ago   295MB
+k8s.gcr.io/coredns/coredns           v1.8.4                                                  8d147537fb7d   7 months ago   47.6MB
+docker/desktop-vpnkit-controller     v2.0                                                    8c2c38aa676e   8 months ago   21MB
+docker/desktop-storage-provisioner   v2.0                                                    99f89471f470   8 months ago   41.9MB
+k8s.gcr.io/pause                     3.5                                                     ed210e3e4a5b   9 months ago   683kB
+nginx                                1.14.2                                                  295c7be07902   2 years ago    109MB
+alpine                               3.5                                                     f80194ae2e0c   2 years ago    4MB
+
+
+C:\Users\Sree>docker image history redis
+IMAGE          CREATED       CREATED BY                                      SIZE      COMMENT
+aea9b698d7d1   5 weeks ago   /bin/sh -c #(nop)  CMD ["redis-server"]         0B
+<missing>      5 weeks ago   /bin/sh -c #(nop)  EXPOSE 6379                  0B
+<missing>      5 weeks ago   /bin/sh -c #(nop)  ENTRYPOINT ["docker-entry…   0B
+<missing>      5 weeks ago   /bin/sh -c #(nop) COPY file:df205a0ef6e6df89…   374B
+<missing>      5 weeks ago   /bin/sh -c #(nop) WORKDIR /data                 0B
+<missing>      5 weeks ago   /bin/sh -c #(nop)  VOLUME [/data]               0B
+<missing>      5 weeks ago   /bin/sh -c mkdir /data && chown redis:redis …   0B
+<missing>      5 weeks ago   /bin/sh -c set -eux;   savedAptMark="$(apt-m…   27.8MB
+<missing>      5 weeks ago   /bin/sh -c #(nop)  ENV REDIS_DOWNLOAD_SHA=5b…   0B
+<missing>      5 weeks ago   /bin/sh -c #(nop)  ENV REDIS_DOWNLOAD_URL=ht…   0B
+<missing>      5 weeks ago   /bin/sh -c #(nop)  ENV REDIS_VERSION=6.2.6      0B
+<missing>      5 weeks ago   /bin/sh -c set -eux;  savedAptMark="$(apt-ma…   4.24MB
+<missing>      5 weeks ago   /bin/sh -c #(nop)  ENV GOSU_VERSION=1.12        0B
+<missing>      5 weeks ago   /bin/sh -c groupadd -r -g 999 redis && usera…   329kB
+<missing>      5 weeks ago   /bin/sh -c #(nop)  CMD ["bash"]                 0B
+<missing>      5 weeks ago   /bin/sh -c #(nop) ADD file:ece5ff85ca549f0b1…   80.4MB
+
+
+C:\Users\Sree>docker image history -q redis
+aea9b698d7d1
+<missing>
+<missing>
+<missing>
+<missing>
+<missing>
+<missing>
+<missing>
+<missing>
+<missing>
+<missing>
+<missing>
+<missing>
+<missing>
+<missing>
+<missing>
+
+
+C:\Users\Sree>docker container run alpine hostname
+53b4bbf39688
+
+
+C:\Users\Sree>docker container ls --all
+CONTAINER ID   IMAGE               COMMAND                  CREATED              STATUS                          PORTS                    NAMES
+53b4bbf39688   alpine              "hostname"               About a minute ago   Exited (0) About a minute ago                            kind_banach
+824d93851e09   redis               "docker-entrypoint.s…"   16 minutes ago       Up 16 minutes                   6379/tcp                 keen_tereshkova
+fdeac4e637a0   mysql:5.7           "docker-entrypoint.s…"   8 days ago           Exited (255) 8 days ago         3306/tcp, 33060/tcp      app_mysql_1
+dbd1157edb4b   node:12-alpine      "docker-entrypoint.s…"   8 days ago           Exited (255) 8 days ago         0.0.0.0:3000->3000/tcp   app_app_1
+2e30979e1d40   nicolaka/netshoot   "zsh"                    8 days ago           Exited (0) 8 days ago                                    awesome_meninsky
+b13d4c86f820   mysql:5.7           "docker-entrypoint.s…"   8 days ago           Exited (137) 8 days ago                                  distracted_elion
+3d1dcb10e32d   getting-started     "docker-entrypoint.s…"   8 days ago           Exited (0) 8 days ago                                    upbeat_gould
+
+C:\Users\Sree>docker container run --interactive --tty --rm ubuntu bash
+root@a69506d2e82e:/# ls
+bin  boot  dev  etc  home  lib  lib32  lib64  libx32  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
+root@a69506d2e82e:/# ps aux
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         1  0.7  0.1   4112  3428 pts/0    Ss   04:43   0:00 bash
+root        11  0.0  0.0   5900  2856 pts/0    R+   04:43   0:00 ps aux
+root@a69506d2e82e:/# cat /etc/issue
+Ubuntu 20.04.3 LTS \n \l
+
+root@a69506d2e82e:/# exit
+exit
+
+
+C:\Users\Sree>docker container ls
+CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS          PORTS      NAMES
+824d93851e09   redis     "docker-entrypoint.s…"   20 minutes ago   Up 20 minutes   6379/tcp   keen_tereshkova
+
+-----------------------------------------------------------------------------------------------------------------------------------
+Todoapp
+-----------------------------------------------------------------------------------------------------------------------------------
+
+PS D:\F\getting-started-master\getting-started-master> cd app
+PS D:\F\getting-started-master\getting-started-master\app> docker build -t getting-started .
+[+] Building 33.4s (15/15) FINISHED
+ => [internal] load build definition from Dockerfile                                                                                                                 0.2s 
+ => => transferring dockerfile: 32B                                                                                                                                  0.0s 
+ => [internal] load .dockerignore                                                                                                                                    0.2s 
+ => => transferring context: 2B                                                                                                                                      0.0s 
+ => resolve image config for docker.io/docker/dockerfile:1                                                                                                          23.4s 
+ => [auth] docker/dockerfile:pull token for registry-1.docker.io                                                                                                     0.0s 
+ => CACHED docker-image://docker.io/docker/dockerfile:1@sha256:42399d4635eddd7a9b8a24be879d2f9a930d0ed040a61324cfdf59ef1357b3b2                                      0.0s 
+ => [internal] load build definition from Dockerfile                                                                                                                 0.0s 
+ => [internal] load .dockerignore                                                                                                                                    0.0s 
+ => [internal] load metadata for docker.io/library/node:12-alpine                                                                                                    0.0s 
+ => [internal] load build context                                                                                                                                    5.9s 
+ => => transferring context: 170.14kB                                                                                                                                4.9s 
+ => [1/5] FROM docker.io/library/node:12-alpine                                                                                                                      0.0s 
+ => CACHED [2/5] RUN apk add --no-cache python2 g++ make                                                                                                             0.0s
+ => CACHED [3/5] WORKDIR /app                                                                                                                                        0.0s 
+ => CACHED [4/5] COPY . .                                                                                                                                            0.0s 
+ => CACHED [5/5] RUN yarn install --production                                                                                                                       0.0s 
+ => exporting to image                                                                                                                                               0.2s
+ => => exporting layers                                                                                                                                              0.0s
+ => => writing image sha256:c916dee0c24b712e2ceea8afb5f7e07ef86a05838c9f9e69a393a1eb1e155b1a                                                                         0.1s
+ => => naming to docker.io/library/getting-started           
+
+PS D:\F\getting-started-master\getting-started-master\app> docker run -dp 3000:3000 getting-started
+0de1b2c67ce36417bdab2d66d8234dff2f41d6fb052946e8151902a52539a1d0
+
+PS D:\F\getting-started-master\getting-started-master\app> docker ps
+CONTAINER ID   IMAGE             COMMAND                  CREATED         STATUS         PORTS                    NAMES
+0de1b2c67ce3   getting-started   "docker-entrypoint.s…"   4 minutes ago   Up 4 minutes   0.0.0.0:3000->3000/tcp   elegant_bardeen
+
+PS D:\F\getting-started-master\getting-started-master\app> docker stop 0de1b2c67ce3
+0de1b2c67ce3
+
+pushing to docker hub
+----------------------
+
+PS D:\getting-started-master\getting-started-master\app> docker build -t sree9818/demo .
+[+] Building 41.6s (15/15) FINISHED
+ => [internal] load build definition from Dockerfile                                          2.7s 
+ => => transferring dockerfile: 32B                                                           0.5s 
+ => [internal] load .dockerignore                                                             6.3s 
+ => => transferring context: 2B                                                               0.0s 
+ => resolve image config for docker.io/docker/dockerfile:1                                   11.2s 
+ => [auth] docker/dockerfile:pull token for registry-1.docker.io                              0.0s 
+ => CACHED docker-image://docker.io/docker/dockerfile:1@sha256:42399d4635eddd7a9b8a24be879d2  0.0s 
+ => [internal] load build definition from Dockerfile                                          0.0s 
+ => [internal] load .dockerignore                                                             0.0s 
+ => [internal] load metadata for docker.io/library/node:12-alpine                             0.0s 
+ => [1/5] FROM docker.io/library/node:12-alpine                                               0.0s 
+ => [internal] load build context                                                            18.2s 
+ => => transferring context: 596.54kB                                                        17.7s 
+ => CACHED [2/5] RUN apk add --no-cache python2 g++ make                                      0.0s 
+ => CACHED [3/5] WORKDIR /app                                                                 0.0s 
+ => CACHED [4/5] COPY . .                                                                     0.0s 
+ => CACHED [5/5] RUN yarn install --production                                                0.0s 
+ => exporting to image                                                                        0.1s 
+ => => exporting layers                                                                       0.0s 
+ => => writing image sha256:58b244072d6885f5482b341ebb5d48d6045e09f858d060fbd107004122f263e9  0.0s
+ => => naming to docker.io/sree9818/demo         
+
+PS D:\getting-started-master\getting-started-master\app> docker push sree9818/demo
+Using default tag: latest
+The push refers to repository [docker.io/sree9818/demo]
+4a3b105cc90f: Mounted from sree9818/demo-started
+cb90d6badfe1: Mounted from sree9818/demo-started
+736b1adda88f: Mounted from sree9818/newone
+f0764e376bec: Mounted from sree9818/newone
+c99dbbb91c1e: Mounted from sree9818/newone 
+743fabfe0b03: Mounted from sree9818/newone
+529f2cda666c: Mounted from sree9818/newone
+1a058d5342cc: Mounted from sree9818/newone
+latest: digest: sha256:0922dd400aef54c946cda9fe55dacc3f18bcadd6729365820e35740afd4ac06d size: 2001
+
+
+start container for random number and ls
+-------------------------------------------
+
+PS D:\getting-started-master\getting-started-master\app> docker run -d ubuntu bash -c "shuf -i 1-10000 -n 1 -o /data.txt && tail -f /dev/null"
+7c40f4495286487b3f1ad8276048c1fc9fdf42304237f4cba9bb5758eceb13b8
+PS D:\getting-started-master\getting-started-master\app> docker ps
+CONTAINER ID   IMAGE     COMMAND                  CREATED              STATUS          PORTS     NAMES
+7c40f4495286   ubuntu    "bash -c 'shuf -i 1-…"   About a minute ago   Up 55 seconds             friendly_borg
+PS D:\getting-started-master\getting-started-master\app> docker exec 7c40f4495286 cat /data.txt
+6847
+
+PS D:\F\getting-started-master\getting-started-master\app> docker run -it ubuntu ls
+bin  boot  dev  etc  home  lib  lib32  lib64  libx32  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
+
+create volume
+---------------------
+
+PS D:\F\getting-started-master\getting-started-master\app> docker volume create todo-db
+todo-db
+
+PS D:\F\getting-started-master\getting-started-master\app> docker run -dp 3000:3000 -v todo-db:/etc/todos getting-started
+36b47ecaa8449e5ea94014de1e38082aaa5de17379edfe234d9a58cf4e578354
+
+PS D:\F\getting-started-master\getting-started-master\app> docker volume inspect todo-db
+[
+    {
+        "CreatedAt": "2022-01-08T06:04:20Z",
+        "Driver": "local",
+        "Labels": {},
+        "Mountpoint": "/var/lib/docker/volumes/todo-db/_data",
+        "Name": "todo-db",
+        "Options": {},
+        "Scope": "local"
+    }
+]
+
+
+mount with source code
+----------------------------------
+PS D:\F\getting-started-master\getting-started-master\app> docker run -dp 3000:3000 `
+>> -w /app -v "$(pwd):/app" `
+>> node:12-alpine `
+>> sh -c "yarn install && yarn run dev"
+1dfcfe0831abce020751f59fdec1adb0a81d0cc6c8e3622aa504cc6743022cdc
+
+PS D:\F\getting-started-master\getting-started-master\app> docker ps
+CONTAINER ID   IMAGE            COMMAND                  CREATED         STATUS         PORTS                    NAMES
+1dfcfe0831ab   node:12-alpine   "docker-entrypoint.s…"   2 minutes ago   Up 2 minutes   0.0.0.0:3000->3000/tcp   elastic_knuth
+PS D:\F\getting-started-master\getting-started-master\app> docker logs -f 1dfcfe0831ab
+yarn install v1.22.17
+[1/4] Resolving packages...
+warning Resolution field "ansi-regex@5.0.1" is incompatible with requested version "ansi-regex@^2.0.0"
+warning Resolution field "ansi-regex@5.0.1" is incompatible with requested version "ansi-regex@^3.0.0"
+warning sqlite3 > node-gyp > tar@2.2.2: This version of tar is no longer supported, and will not receive security updates. Please upgrade asap.
+warning sqlite3 > node-gyp > request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+warning sqlite3 > node-gyp > request > har-validator@5.1.5: this library is no longer supported
+warning sqlite3 > node-gyp > request > uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known 
+to be problematic.  See https://v8.dev/blog/math-random for details.
+[2/4] Fetching packages...
+[3/4] Linking dependencies...
+[4/4] Building fresh packages...
+success Saved lockfile.
+Done in 201.09s.
+yarn run v1.22.17
+$ nodemon src/index.js
+[nodemon] 2.0.13
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,json
+[nodemon] starting `node src/index.js`
+Using sqlite database at /etc/todos/todo.db
+Listening on port 3000
+
+network
+-----------------
+PS D:\F\getting-started-master\getting-started-master\app> docker network create todo-app
+
+PS D:\F\getting-started-master\getting-started-master\app> docker run -d --network todo-app --network-alias mysql `
+>> -v todo-mysql-data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=secret `
+>> -e MYSQL_DATABASE=todos mysql:5.7
+f4e9e95ff209811e91e9fa374b9e272051132de79c00c1450f72649aa36aa8c6
+PS D:\F\getting-started-master\getting-started-master\app> docker ps       
+CONTAINER ID   IMAGE       COMMAND                  CREATED         STATUS         PORTS                 NAMES
+f4e9e95ff209   mysql:5.7   "docker-entrypoint.s…"   2 minutes ago   Up 2 minutes   3306/tcp, 33060/tcp   heuristic_noether
+PS D:\F\getting-started-master\getting-started-master\app> docker exec -it f4e9e95ff209 mysql mysql -u root -p
+Enter password: 
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 2
+Server version: 5.7.36 MySQL Community Server (GPL)
+
+Copyright (c) 2000, 2021, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
+| todos              |
++--------------------+
+
+mysql> exit
+Bye
+
+PS D:\F\getting-started-master\getting-started-master\app> docker run -it --network todo-app nicolaka/netshoot
+                    dP            dP                           dP   
+                    88            88                           88
+88d888b. .d8888b. d8888P .d8888b. 88d888b. .d8888b. .d8888b. d8888P
+88'  `88 88ooood8   88   Y8ooooo. 88'  `88 88'  `88 88'  `88   88
+88    88 88.  ...   88         88 88    88 88.  .88 88.  .88   88
+dP    dP `88888P'   dP   `88888P' dP    dP `88888P' `88888P'   dP
+
+Welcome to Netshoot! (github.com/nicolaka/netshoot)
+
+
+
+ e7098386b73d  ~  dig mysql
+
+; <<>> DiG 9.16.22 <<>> mysql
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 28527
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;mysql.                         IN      A
+
+;; ANSWER SECTION:
+mysql.                  600     IN      A       172.18.0.2
+
+;; Query time: 30 msec
+;; SERVER: 127.0.0.11#53(127.0.0.11)
+;; WHEN: Sat Jan 08 06:31:01 UTC 2022
+;; MSG SIZE  rcvd: 44
+
+
+ e7098386b73d  ~  exit
+
+PS D:\F\getting-started-master\getting-started-master\app> docker run -dp 3000:3000 -w /app -v "$(pwd):/app" --network todo-app `
+>> -e MYSQL_HOST=mysql -e MYSQL_USER=root `
+>> -e MYSQL_PASSWORD=secret -e MYSQL_DB=todos node:12-alpine sh -c "yarn install && yarn run dev"
+b7654d90914176a3783bebac924ad2928297b9be5858c9c195b2a278e672098a
+PS D:\F\getting-started-master\getting-started-master\app> docker ps                                          
+CONTAINER ID   IMAGE            COMMAND                  CREATED              STATUS              PORTS                    NAMES
+b7654d909141   node:12-alpine   "docker-entrypoint.s…"   About a minute ago   Up About a minute   0.0.0.0:3000->3000/tcp   nervous_lumiere
+f4e9e95ff209   mysql:5.7        "docker-entrypoint.s…"   16 minutes ago       Up 16 minutes       3306/tcp, 33060/tcp      heuristic_noether
+PS D:\F\getting-started-master\getting-started-master\app> docker exec -it f4e9e95ff209 mysql -p todos            
+Enter password: 
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 5
+Server version: 5.7.36 MySQL Community Server (GPL)
+
+Copyright (c) 2000, 2021, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+mysql> select * from todo_items;
++--------------------------------------+---------+-----------+
+| id                                   | name    | completed |
++--------------------------------------+---------+-----------+
+| 498af6d3-f2d8-46ea-bfa5-1c9a7a4c381d | netflix |         1 |
+| 36f982bc-d96e-45f5-85cc-bb46ee7c3c01 | prime   |         0 |
++--------------------------------------+---------+-----------+
+2 rows in set (0.04 sec)
+
+Docker compose
+----------------------------------
+
+PS D:\F\getting-started-master\getting-started-master\app> docker-compose version
+Docker Compose version v2.2.1
+PS D:\getting-started-master\getting-started-master\app> docker run -dp 3000:3000 -w /app -v "$(pwd):/app" --network todo-app `
+>> -e MYSQL_HOST=mysql -e MYSQL_USER=root `
+>> -e MYSQL_PASSWORD=secret -e MYSQL_DB=todos node:12-alpine sh -c "yarn install && yarn run dev"
+dc6ea1914d236f26cd09dd168769197214d83b47a3f3ca0c3d9fbd127412d7a0
+PS D:\getting-started-master\getting-started-master\app> docker run -d --network todo-app --network-alias mysql `
+>> -v todo-mysql-data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=secret `
+>> -e MYSQL_DATABASE=todos mysql:5.7
+37bd434828abde60d6e4827202cbbbc78dc2cd6475d830548fd3298c2b491383
+PS D:\getting-started-master\getting-started-master\app> docker-compose up -d
+[+] Running 1/3
+ - Network app_default    Created                                                                  [+] Running 1/3                                                   0.8s 
+ - Network app_default    Created                                                                                                                                    0.8s 
+[+] Running 3/3p_mysql_1  Starting
+ - Network app_default    Created                                                                                                                                    0.8s
+ - Container app_mysql_1  Started                                                                                                                                   16.3s
+ - Container app_app_1    Started            
+
+
+
+ 
+
+
+

@@ -1,0 +1,539 @@
+Welcome to Ubuntu 20.04.3 LTS (GNU/Linux 4.4.0-19041-Microsoft x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Fri Jan  7 16:55:58 IST 2022
+
+  System load:    0.52      Processes:              7
+  Usage of /home: unknown   Users logged in:        0
+  Memory usage:   85%       IPv4 address for eth2:  172.26.112.1
+  Swap usage:     22%       IPv4 address for wifi0: 192.168.1.4
+
+
+89 updates can be applied immediately.
+39 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+
+
+This message is shown once a day. To disable it please create the
+/home/ubuntu/.hushlogin file.
+ubuntu@DESKTOP-GO7EFQ4:~$ pwd
+/home/ubuntu
+ubuntu@DESKTOP-GO7EFQ4:~$ ls
+AbcImlpex  content.txt       demoyaml.yml    file2.txt        helloscript.sh  input.sh           myinfo.txt   readdemo.sh    tempsree      zing
+Hashmum    copiedgalaxy.txt  dir             fivediv.sh       hi.sh           multi_fun.sh       oddlimit.sh  sree           vardemo.sh
+args.sh    decision.sh       fabino.sh       foreach.sh       hosts           multicontent.txt   oddorev.sh   sree-playbook  variable.sh
+array.sh   decision.sh.save  fabino.sh.save  forloop.sh       ifelse.sh       mycommands.sh      prime.sh     sreerole       while.sh
+assign     demo_fun.sh       favfood.sh      hellooscript.sh  initialGalaxy   myfilewithvars.sh  readdata.sh  temp           whiledemo.sh
+ubuntu@DESKTOP-GO7EFQ4:~$ mkdir prime
+ubuntu@DESKTOP-GO7EFQ4:~$ cd prime
+ubuntu@DESKTOP-GO7EFQ4:~/prime$ cd /
+ubuntu@DESKTOP-GO7EFQ4:/$ pwd
+/
+ubuntu@DESKTOP-GO7EFQ4:/$ ls
+bin  boot  dev  etc  home  init  lib  lib32  lib64  libx32  media  mnt  opt  proc  root  run  sbin  snap  srv  sys  tmp  usr  var
+ubuntu@DESKTOP-GO7EFQ4:/$ cd usr
+ubuntu@DESKTOP-GO7EFQ4:/usr$ ls
+bin  config  games  include  lib  lib32  lib64  libexec  libx32  local  sbin  share  src
+ubuntu@DESKTOP-GO7EFQ4:/usr$ cd ..
+ubuntu@DESKTOP-GO7EFQ4:/$ cd
+ubuntu@DESKTOP-GO7EFQ4:~$ cd prime
+ubuntu@DESKTOP-GO7EFQ4:~/prime$ mkdir -p parent/child
+ubuntu@DESKTOP-GO7EFQ4:~/prime$ ls
+parent
+ubuntu@DESKTOP-GO7EFQ4:~/prime$ cd parent
+ubuntu@DESKTOP-GO7EFQ4:~/prime/parent$ ls
+child
+ubuntu@DESKTOP-GO7EFQ4:~/prime/parent$ cd
+ubuntu@DESKTOP-GO7EFQ4:~$ ls > outputfile.txt
+ubuntu@DESKTOP-GO7EFQ4:~$ cat outputfile.txt
+AbcImlpex
+Hashmum
+args.sh
+array.sh
+assign
+content.txt
+copiedgalaxy.txt
+decision.sh
+decision.sh.save
+demo_fun.sh
+demoyaml.yml
+dir
+fabino.sh
+fabino.sh.save
+favfood.sh
+file2.txt
+fivediv.sh
+foreach.sh
+forloop.sh
+hellooscript.sh
+helloscript.sh
+hi.sh
+hosts
+ifelse.sh
+initialGalaxy
+input.sh
+multi_fun.sh
+multicontent.txt
+mycommands.sh
+myfilewithvars.sh
+myinfo.txt
+oddlimit.sh
+oddorev.sh
+outputfile.txt
+prime
+prime.sh
+readdata.sh
+readdemo.sh
+sree
+sree-playbook
+sreerole
+temp
+tempsree
+vardemo.sh
+variable.sh
+while.sh
+whiledemo.sh
+zing
+ubuntu@DESKTOP-GO7EFQ4:~$ cd prime
+ubuntu@DESKTOP-GO7EFQ4:~/prime$ echo "Helloo" > new.txt
+ubuntu@DESKTOP-GO7EFQ4:~/prime$ ls
+new.txt  parent
+ubuntu@DESKTOP-GO7EFQ4:~/prime$ cat new.txt
+Helloo
+ubuntu@DESKTOP-GO7EFQ4:~/prime$ echo "wowww" >> new.txt
+ubuntu@DESKTOP-GO7EFQ4:~/prime$ cat new.txt
+Helloo
+wowww
+ubuntu@DESKTOP-GO7EFQ4:~/prime$ echo "wowww" >> new1.txt
+ubuntu@DESKTOP-GO7EFQ4:~/prime$ cat n* > mix.txt
+ubuntu@DESKTOP-GO7EFQ4:~/prime$ ls
+mix.txt  new.txt  new1.txt  parent
+ubuntu@DESKTOP-GO7EFQ4:~/prime$ cat mix.txt
+Helloo
+wowww
+wowww
+ubuntu@DESKTOP-GO7EFQ4:~/prime$ mv parent /home/ubuntu
+ubuntu@DESKTOP-GO7EFQ4:~/prime$ ls
+mix.txt  new.txt  new1.txt
+ubuntu@DESKTOP-GO7EFQ4:~/prime$ cd
+ubuntu@DESKTOP-GO7EFQ4:~$ ls
+AbcImlpex  content.txt       demoyaml.yml    file2.txt        helloscript.sh  input.sh           myinfo.txt      prime        sree-playbook  variable.sh
+Hashmum    copiedgalaxy.txt  dir             fivediv.sh       hi.sh           multi_fun.sh       oddlimit.sh     prime.sh     sreerole       while.sh
+args.sh    decision.sh       fabino.sh       foreach.sh       hosts           multicontent.txt   oddorev.sh      readdata.sh  temp           whiledemo.sh
+array.sh   decision.sh.save  fabino.sh.save  forloop.sh       ifelse.sh       mycommands.sh      outputfile.txt  readdemo.sh  tempsree       zing
+assign     demo_fun.sh       favfood.sh      hellooscript.sh  initialGalaxy   myfilewithvars.sh  parent          sree         vardemo.sh
+ubuntu@DESKTOP-GO7EFQ4:~$ cd prime
+ubuntu@DESKTOP-GO7EFQ4:~/prime$ ls
+mix.txt  new.txt  new1.txt
+ubuntu@DESKTOP-GO7EFQ4:~/prime$ cp mix.txt /home/ubuntu
+ubuntu@DESKTOP-GO7EFQ4:~/prime$ ls
+mix.txt  new.txt  new1.txt
+ubuntu@DESKTOP-GO7EFQ4:~/prime$ cd
+ubuntu@DESKTOP-GO7EFQ4:~$ ls
+AbcImlpex  content.txt       demoyaml.yml    file2.txt        helloscript.sh  input.sh          myfilewithvars.sh  parent       sree           vardemo.sh
+Hashmum    copiedgalaxy.txt  dir             fivediv.sh       hi.sh           mix.txt           myinfo.txt         prime        sree-playbook  variable.sh
+args.sh    decision.sh       fabino.sh       foreach.sh       hosts           multi_fun.sh      oddlimit.sh        prime.sh     sreerole       while.sh
+array.sh   decision.sh.save  fabino.sh.save  forloop.sh       ifelse.sh       multicontent.txt  oddorev.sh         readdata.sh  temp           whiledemo.sh
+assign     demo_fun.sh       favfood.sh      hellooscript.sh  initialGalaxy   mycommands.sh     outputfile.txt     readdemo.sh  tempsree       zing
+ubuntu@DESKTOP-GO7EFQ4:~$ mv parent newfolder
+ubuntu@DESKTOP-GO7EFQ4:~$ ls
+AbcImlpex  content.txt       demoyaml.yml    file2.txt        helloscript.sh  input.sh          myfilewithvars.sh  outputfile.txt  sree           vardemo.sh
+Hashmum    copiedgalaxy.txt  dir             fivediv.sh       hi.sh           mix.txt           myinfo.txt         prime           sree-playbook  variable.sh
+args.sh    decision.sh       fabino.sh       foreach.sh       hosts           multi_fun.sh      newfolder          prime.sh        sreerole       while.sh
+array.sh   decision.sh.save  fabino.sh.save  forloop.sh       ifelse.sh       multicontent.txt  oddlimit.sh        readdata.sh     temp           whiledemo.sh
+assign     demo_fun.sh       favfood.sh      hellooscript.sh  initialGalaxy   mycommands.sh     oddorev.sh         readdemo.sh     tempsree       zing
+ubuntu@DESKTOP-GO7EFQ4:~$ whoami
+ubuntu
+ubuntu@DESKTOP-GO7EFQ4:~$ who
+ubuntu@DESKTOP-GO7EFQ4:~$ man man
+ubuntu@DESKTOP-GO7EFQ4:~$ cat /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/var/run/ircd:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+systemd-network:x:100:102:systemd Network Management,,,:/run/systemd:/usr/sbin/nologin
+systemd-resolve:x:101:103:systemd Resolver,,,:/run/systemd:/usr/sbin/nologin
+systemd-timesync:x:102:104:systemd Time Synchronization,,,:/run/systemd:/usr/sbin/nologin
+messagebus:x:103:106::/nonexistent:/usr/sbin/nologin
+syslog:x:104:110::/home/syslog:/usr/sbin/nologin
+_apt:x:105:65534::/nonexistent:/usr/sbin/nologin
+tss:x:106:111:TPM software stack,,,:/var/lib/tpm:/bin/false
+uuidd:x:107:112::/run/uuidd:/usr/sbin/nologin
+tcpdump:x:108:113::/nonexistent:/usr/sbin/nologin
+sshd:x:109:65534::/run/sshd:/usr/sbin/nologin
+landscape:x:110:115::/var/lib/landscape:/usr/sbin/nologin
+pollinate:x:111:1::/var/cache/pollinate:/bin/false
+ubuntu:x:1000:1000:,,,:/home/ubuntu:/bin/bash
+sree:x:1001:1002::/home/sree:/bin/sh
+galaxy:x:1007:1010::/home/galaxy1:/bin/sh
+user1:x:1008:1011:,,,:/home/user1:/bin/bash
+timjag:x:1009:1012:,,,:/home/timjag:/bin/bash
+scooby:x:1010:1013:,,,:/home/scooby:/bin/bash
+tom:x:1002:1004:,,,:/home/tom:/bin/bash
+jerry:x:1003:1006:,,,:/home/jerry:/bin/bash
+micky:x:1004:1007:,,,:/home/micky:/bin/bash
+mini:x:1005:1008:,,,:/home/mini:/bin/bash
+ubuntu@DESKTOP-GO7EFQ4:~$ sudo adduser jango
+[sudo] password for ubuntu:
+Sorry, try again.
+[sudo] password for ubuntu:
+Adding user `jango' ...
+Adding new group `jango' (1009) ...
+Adding new user `jango' (1006) with group `jango' ...
+Creating home directory `/home/jango' ...
+Copying files from `/etc/skel' ...
+New password:
+Retype new password:
+passwd: password updated successfully
+Changing the user information for jango
+Enter the new value, or press ENTER for the default
+        Full Name []:
+        Room Number []:
+        Work Phone []:
+        Home Phone []:
+        Other []:
+Is the information correct? [Y/n] y
+ubuntu@DESKTOP-GO7EFQ4:~$ cat /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/var/run/ircd:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+systemd-network:x:100:102:systemd Network Management,,,:/run/systemd:/usr/sbin/nologin
+systemd-resolve:x:101:103:systemd Resolver,,,:/run/systemd:/usr/sbin/nologin
+systemd-timesync:x:102:104:systemd Time Synchronization,,,:/run/systemd:/usr/sbin/nologin
+messagebus:x:103:106::/nonexistent:/usr/sbin/nologin
+syslog:x:104:110::/home/syslog:/usr/sbin/nologin
+_apt:x:105:65534::/nonexistent:/usr/sbin/nologin
+tss:x:106:111:TPM software stack,,,:/var/lib/tpm:/bin/false
+uuidd:x:107:112::/run/uuidd:/usr/sbin/nologin
+tcpdump:x:108:113::/nonexistent:/usr/sbin/nologin
+sshd:x:109:65534::/run/sshd:/usr/sbin/nologin
+landscape:x:110:115::/var/lib/landscape:/usr/sbin/nologin
+pollinate:x:111:1::/var/cache/pollinate:/bin/false
+ubuntu:x:1000:1000:,,,:/home/ubuntu:/bin/bash
+sree:x:1001:1002::/home/sree:/bin/sh
+galaxy:x:1007:1010::/home/galaxy1:/bin/sh
+user1:x:1008:1011:,,,:/home/user1:/bin/bash
+timjag:x:1009:1012:,,,:/home/timjag:/bin/bash
+scooby:x:1010:1013:,,,:/home/scooby:/bin/bash
+tom:x:1002:1004:,,,:/home/tom:/bin/bash
+jerry:x:1003:1006:,,,:/home/jerry:/bin/bash
+micky:x:1004:1007:,,,:/home/micky:/bin/bash
+mini:x:1005:1008:,,,:/home/mini:/bin/bash
+jango:x:1006:1009:,,,:/home/jango:/bin/bash
+ubuntu@DESKTOP-GO7EFQ4:~$ cat /etc/group
+root:x:0:
+daemon:x:1:
+bin:x:2:
+sys:x:3:
+adm:x:4:syslog,ubuntu
+tty:x:5:syslog
+disk:x:6:
+lp:x:7:
+mail:x:8:
+news:x:9:
+uucp:x:10:
+man:x:12:
+proxy:x:13:
+kmem:x:15:
+dialout:x:20:ubuntu
+fax:x:21:
+voice:x:22:
+cdrom:x:24:ubuntu
+floppy:x:25:ubuntu
+tape:x:26:
+sudo:x:27:ubuntu,scooby
+audio:x:29:ubuntu
+dip:x:30:ubuntu
+www-data:x:33:
+backup:x:34:
+operator:x:37:
+list:x:38:
+irc:x:39:
+src:x:40:
+gnats:x:41:
+shadow:x:42:
+utmp:x:43:
+video:x:44:ubuntu
+sasl:x:45:
+plugdev:x:46:ubuntu
+staff:x:50:
+games:x:60:
+users:x:100:
+nogroup:x:65534:
+systemd-journal:x:101:
+systemd-network:x:102:
+systemd-resolve:x:103:
+systemd-timesync:x:104:
+crontab:x:105:
+messagebus:x:106:
+input:x:107:
+kvm:x:108:
+render:x:109:
+syslog:x:110:
+tss:x:111:
+uuidd:x:112:
+tcpdump:x:113:
+ssh:x:114:
+landscape:x:115:
+admin:x:116:
+netdev:x:117:ubuntu
+lxd:x:118:
+ubuntu:x:1000:
+dev:x:1001:
+sree:x:1002:
+devops:x:1003:
+cartoon:x:1005:
+galaxy:x:1010:
+user1:x:1011:
+timjag:x:1012:
+scooby:x:1013:
+tom:x:1004:
+jerry:x:1006:
+micky:x:1007:
+mini:x:1008:
+jango:x:1009:
+ubuntu@DESKTOP-GO7EFQ4:~$ sudo groupadd mass
+ubuntu@DESKTOP-GO7EFQ4:~$ cat /etc/group
+root:x:0:
+daemon:x:1:
+bin:x:2:
+sys:x:3:
+adm:x:4:syslog,ubuntu
+tty:x:5:syslog
+disk:x:6:
+lp:x:7:
+mail:x:8:
+news:x:9:
+uucp:x:10:
+man:x:12:
+proxy:x:13:
+kmem:x:15:
+dialout:x:20:ubuntu
+fax:x:21:
+voice:x:22:
+cdrom:x:24:ubuntu
+floppy:x:25:ubuntu
+tape:x:26:
+sudo:x:27:ubuntu,scooby
+audio:x:29:ubuntu
+dip:x:30:ubuntu
+www-data:x:33:
+backup:x:34:
+operator:x:37:
+list:x:38:
+irc:x:39:
+src:x:40:
+gnats:x:41:
+shadow:x:42:
+utmp:x:43:
+video:x:44:ubuntu
+sasl:x:45:
+plugdev:x:46:ubuntu
+staff:x:50:
+games:x:60:
+users:x:100:
+nogroup:x:65534:
+systemd-journal:x:101:
+systemd-network:x:102:
+systemd-resolve:x:103:
+systemd-timesync:x:104:
+crontab:x:105:
+messagebus:x:106:
+input:x:107:
+kvm:x:108:
+render:x:109:
+syslog:x:110:
+tss:x:111:
+uuidd:x:112:
+tcpdump:x:113:
+ssh:x:114:
+landscape:x:115:
+admin:x:116:
+netdev:x:117:ubuntu
+lxd:x:118:
+ubuntu:x:1000:
+dev:x:1001:
+sree:x:1002:
+devops:x:1003:
+cartoon:x:1005:
+galaxy:x:1010:
+user1:x:1011:
+timjag:x:1012:
+scooby:x:1013:
+tom:x:1004:
+jerry:x:1006:
+micky:x:1007:
+mini:x:1008:
+jango:x:1009:
+mass:x:1014:
+ubuntu@DESKTOP-GO7EFQ4:~$ su - jango
+Password:
+Welcome to Ubuntu 20.04.3 LTS (GNU/Linux 4.4.0-19041-Microsoft x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Fri Jan  7 17:19:30 IST 2022
+
+  System load:    0.52      Processes:              9
+  Usage of /home: unknown   Users logged in:        0
+  Memory usage:   83%       IPv4 address for eth2:  172.26.112.1
+  Swap usage:     23%       IPv4 address for wifi0: 192.168.1.4
+
+
+89 updates can be applied immediately.
+39 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+
+
+This message is shown once a day. To disable it please create the
+/home/jango/.hushlogin file.
+jango@DESKTOP-GO7EFQ4:~$ su - ubuntu
+Password:
+ubuntu@DESKTOP-GO7EFQ4:~$ cd prime
+ubuntu@DESKTOP-GO7EFQ4:~/prime$ ls -il
+total 0
+10696049115039070 -rw-r--r-- 1 ubuntu ubuntu 19 Jan  7 17:09 mix.txt
+41658296553248765 -rw-r--r-- 1 ubuntu ubuntu 13 Jan  7 17:07 new.txt
+56576470318867296 -rw-r--r-- 1 ubuntu ubuntu  6 Jan  7 17:08 new1.txt
+ubuntu@DESKTOP-GO7EFQ4:~/prime$ file new.txt
+new.txt: ASCII text
+ubuntu@DESKTOP-GO7EFQ4:~/prime$ ls -a
+.  ..  mix.txt  new.txt  new1.txt
+ubuntu@DESKTOP-GO7EFQ4:~/prime$ ls -l
+total 0
+-rw-r--r-- 1 ubuntu ubuntu 19 Jan  7 17:09 mix.txt
+-rw-r--r-- 1 ubuntu ubuntu 13 Jan  7 17:07 new.txt
+-rw-r--r-- 1 ubuntu ubuntu  6 Jan  7 17:08 new1.txt
+ubuntu@DESKTOP-GO7EFQ4:~/prime$ ls -h
+mix.txt  new.txt  new1.txt
+ubuntu@DESKTOP-GO7EFQ4:~/prime$ chmod +rwx new.txt
+ubuntu@DESKTOP-GO7EFQ4:~/prime$ ls -l
+total 0
+-rw-r--r-- 1 ubuntu ubuntu 19 Jan  7 17:09 mix.txt
+-rwxrwxr-x 1 ubuntu ubuntu 13 Jan  7 17:07 new.txt
+-rw-r--r-- 1 ubuntu ubuntu  6 Jan  7 17:08 new1.txt
+ubuntu@DESKTOP-GO7EFQ4:~/prime$ touch pip.txt
+ubuntu@DESKTOP-GO7EFQ4:~/prime$ nano pip.txt
+ubuntu@DESKTOP-GO7EFQ4:~/prime$ cat pip.txt
+hi its a new file
+ubuntu@DESKTOP-GO7EFQ4:~/prime$ rm new.txt
+ubuntu@DESKTOP-GO7EFQ4:~/prime$ ls
+mix.txt  new1.txt  pip.txt
+ubuntu@DESKTOP-GO7EFQ4:~/prime$ cd
+ubuntu@DESKTOP-GO7EFQ4:~$ find . -name mix.txt
+./mix.txt
+./prime/mix.txt
+./temp/mix.txt
+ubuntu@DESKTOP-GO7EFQ4:~$ find . -type d -name "p*"
+./.config/procps
+./prime
+./sree/dirxyz/parentfold
+./temp/parentfold
+./tempsree/parentfold
+ubuntu@DESKTOP-GO7EFQ4:~$ find . -name newfolder -delete
+find: cannot delete ‘./newfolder’: Directory not empty
+ubuntu@DESKTOP-GO7EFQ4:~$ find . -name mix.txt -delete
+ubuntu@DESKTOP-GO7EFQ4:~$ ls
+AbcImlpex  content.txt       demoyaml.yml    file2.txt        helloscript.sh  input.sh           myinfo.txt      prime        sree-playbook  variable.sh
+Hashmum    copiedgalaxy.txt  dir             fivediv.sh       hi.sh           multi_fun.sh       newfolder       prime.sh     sreerole       while.sh
+args.sh    decision.sh       fabino.sh       foreach.sh       hosts           multicontent.txt   oddlimit.sh     readdata.sh  temp           whiledemo.sh
+array.sh   decision.sh.save  fabino.sh.save  forloop.sh       ifelse.sh       mycommands.sh      oddorev.sh      readdemo.sh  tempsree       zing
+assign     demo_fun.sh       favfood.sh      hellooscript.sh  initialGalaxy   myfilewithvars.sh  outputfile.txt  sree         vardemo.sh
+ubuntu@DESKTOP-GO7EFQ4:~$ free
+              total        used        free      shared  buff/cache   available
+Mem:        4073144     3299108      544684       17720      229352      640304
+Swap:      12582912     2950304     9632608
+ubuntu@DESKTOP-GO7EFQ4:~$ uptime
+ 17:30:37 up 34 min,  0 users,  load average: 0.52, 0.58, 0.59
+ubuntu@DESKTOP-GO7EFQ4:~$ top
+top - 17:59:00 up  1:03,  0 users,  load average: 0.52, 0.58, 0.59
+Tasks:   8 total,   1 running,   7 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  6.8 us, 15.0 sy,  0.0 ni, 76.8 id,  0.0 wa,  1.5 hi,  0.0 si,  0.0 st
+MiB Mem :   3977.7 total,    598.5 free,   3155.2 used,    224.0 buff/cache
+MiB Swap:  12288.0 total,   9320.0 free,   2968.0 used.    691.9 avail Mem
+
+  PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  263 ubuntu    20   0   18932   2072   1528 R   0.7   0.1   0:00.12 top
+    1 root      20   0    8944    164    120 S   0.0   0.0   0:00.25 init
+    9 root      20   0    8944    128     84 S   0.0   0.0   0:00.01 init
+   10 ubuntu    20   0   18212   2644   2536 S   0.0   0.1   0:00.53 bash
+  158 root      20   0   18416   1988   1964 S   0.0   0.0   0:00.04 su
+  159 jango     20   0   18092   3600   3492 S   0.0   0.1   0:00.15 bash
+  225 root      20   0   18416   2468   2444 S   0.0   0.1   0:00.05 su
+  226 ubuntu    20   0   18092   3648   3552 S   0.0   0.1   0:00.33 bash
+ubuntu@DESKTOP-GO7EFQ4:~$ ps
+  PID TTY          TIME CMD
+   10 tty1     00:00:00 bash
+  226 tty1     00:00:00 bash
+  264 tty1     00:00:00 ps
+ubuntu@DESKTOP-GO7EFQ4:~$ df
+Filesystem     1K-blocks     Used Available Use% Mounted on
+rootfs          68858216 66522052   2336164  97% /
+none            68858216 66522052   2336164  97% /dev
+none            68858216 66522052   2336164  97% /run
+none            68858216 66522052   2336164  97% /run/lock
+none            68858216 66522052   2336164  97% /run/shm
+none            68858216 66522052   2336164  97% /run/user
+tmpfs           68858216 66522052   2336164  97% /sys/fs/cgroup
+C:\             68858216 66522052   2336164  97% /mnt/c
+D:\            194558972 59869168 134689804  31% /mnt/d
+F:\            204798972   101576 204697396   1% /mnt/f
+ubuntu@DESKTOP-GO7EFQ4:~/review$ env
+SHELL=/bin/bash
+PWD=/home/ubuntu/review
+LOGNAME=ubuntu
+HOME=/home/ubuntu
+LANG=C.UTF-8
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+LESSCLOSE=/usr/bin/lesspipe %s %s
+TERM=xterm-256colorFQ4:~/review$ df
+LESSOPEN=| /usr/bin/lesspipe %ssed Available Use% Mounted on
+USER=ubuntu    273657192 110780264 162876928  41% /
+SHLVL=1        273657192 110780264 162876928  41% /dev
+XDG_DATA_DIRS=/usr/local/share:/usr/share:/var/lib/snapd/desktop
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin   273657192 110780264 162876928  41% /run/shm
+MAIL=/var/mail/ubuntu192 110780264 162876928  41% /run/user
+OLDPWD=/home/ubuntu57192 110780264 162876928  41% /sys/fs/cgroup
+_=/usr/bin/env 273657192 110780264 162876928  41% /mnt/c

@@ -1,0 +1,134 @@
+ubuntu@DESKTOP-GO7EFQ4:~$ cd prime
+ubuntu@DESKTOP-GO7EFQ4:~/prime$ nano new.sh
+ubuntu@DESKTOP-GO7EFQ4:~/prime$ chmod +x new.sh
+ubuntu@DESKTOP-GO7EFQ4:~/prime$ ./new.sh
+sree TVM
+ubuntu@DESKTOP-GO7EFQ4:~/prime$ cat new.sh
+#!/bin/bash
+name=sree
+city=TVM
+echo "$name $city"
+ubuntu@DESKTOP-GO7EFQ4:~/prime$ nano read.sh
+ubuntu@DESKTOP-GO7EFQ4:~/prime$ chmod +x read.sh
+ubuntu@DESKTOP-GO7EFQ4:~/prime$ ./read.sh
+enter ur name sree
+sree
+ubuntu@DESKTOP-GO7EFQ4:~/prime$ cat read.sh
+#!/bin/bash
+read -p "enter ur name " name
+echo "$name"
+ubuntu@DESKTOP-GO7EFQ4:~$ nano arguments.sh
+ubuntu@DESKTOP-GO7EFQ4:~$ chmod 774 arguments.sh
+ubuntu@DESKTOP-GO7EFQ4:~$ ./arguments.sh 5 8
+first argument  5
+second argument  8
+ubuntu@DESKTOP-GO7EFQ4:~$ cat arguments.sh
+#!/bin/bash
+echo "first argument " $1
+echo "second argument " $2
+ubuntu@DESKTOP-GO7EFQ4:~$ nano decision.sh
+ubuntu@DESKTOP-GO7EFQ4:~$ chmod 774 decision.sh
+ubuntu@DESKTOP-GO7EFQ4:~$ ./decision.sh
+enter fruit mango
+i like mango
+ubuntu@DESKTOP-GO7EFQ4:~$ cat decision.sh
+#!/bin/bash
+read -p "enter fruit" fruit
+if [ $fruit = mango ]
+        then echo "i like mango"
+elif [ $fruit = grape ]
+        then echo " i like grape "
+        else echo "nothing"
+fi
+ubuntu@DESKTOP-GO7EFQ4:~$ nano forloop.sh
+ubuntu@DESKTOP-GO7EFQ4:~$ chmod 774 forloop.sh
+ubuntu@DESKTOP-GO7EFQ4:~$ ./forloop.sh
+enter num 5
+1 number is 5
+enter num 6
+2 number is 6
+enter num6
+3 number is 6
+enter num4
+4 number is 4
+ubuntu@DESKTOP-GO7EFQ4:~$ cat forloop.sh
+#!/bin/bash
+for ((c=1;c<5;c++))
+        do
+                read -p "enter num" num
+                echo "$c number is $num"
+        done
+
+
+ubuntu@DESKTOP-GO7EFQ4:~$ nano array.sh
+ubuntu@DESKTOP-GO7EFQ4:~$ chmod 774 array.sh
+ubuntu@DESKTOP-GO7EFQ4:~$ ./array.sh
+susan
+tabu
+sree
+abin
+sathesh
+ubuntu@DESKTOP-GO7EFQ4:~$ cat array.sh
+#!/bin/bash
+friends=("susan" "tabu" "sree" "abin" "sathesh")
+for frnd in "${friends[@]}"
+do
+        echo "$frnd"
+done
+=========================================================================================================================================
+=========================================================================================================================================
+Ansible
+========
+
+ubuntu@DESKTOP-GO7EFQ4:~$ ansible --version
+ansible [core 2.11.7]
+  config file = /etc/ansible/ansible.cfg
+  configured module search path = ['/home/ubuntu/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python3/dist-packages/ansible
+  ansible collection location = /home/ubuntu/.ansible/collections:/usr/share/ansible/collections
+  executable location = /usr/bin/ansible
+  python version = 3.8.10 (default, Jun  2 2021, 10:49:15) [GCC 9.4.0]
+  jinja version = 2.10.1
+  libyaml = True
+ubuntu@DESKTOP-GO7EFQ4:~$ ansible-galaxy -h
+usage: ansible-galaxy [-h] [--version] [-v] TYPE ...
+
+Perform various Role and Collection related operations.
+
+positional arguments:
+  TYPE
+    collection   Manage an Ansible Galaxy collection.
+    role         Manage an Ansible Galaxy role.
+
+optional arguments:
+  --version      show program's version number, config file location, configured
+                 module search path, module location, executable location and
+                 exit
+  -h, --help     show this help message and exit
+  -v, --verbose  verbose mode (-vvv for more, -vvvv to enable connection
+                 debugging)
+ ubuntu@DESKTOP-GO7EFQ4:~$ ansible-galaxy init --force --offline tom
+- Role tom was created successfully
+ubuntu@DESKTOP-GO7EFQ4:~$ tree tom
+tom
+├── README.md
+├── defaults
+│   └── main.yml
+├── files
+├── handlers
+│   └── main.yml
+├── meta
+│   └── main.yml
+├── tasks
+│   └── main.yml
+├── templates
+├── tests
+│   ├── inventory
+│   └── test.yml
+└── vars
+    └── main.yml
+
+8 directories, 8 files
+ubuntu@DESKTOP-GO7EFQ4:~$ cd tom
+ubuntu@DESKTOP-GO7EFQ4:~/tom$ ls
+README.md  defaults  files  handlers  meta  tasks  templates  tests  vars

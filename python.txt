@@ -1,0 +1,58 @@
+ubuntu@DESKTOP-GO7EFQ4:~$ python3
+Python 3.8.10 (default, Jun  2 2021, 10:49:15)
+[GCC 9.4.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> 12+9
+21
+>>> 4/2
+2.0
+>>> name = "sree"
+>>> id = "1234"
+>>> print("name " +name+ " id " +str(id))
+name sree id 1234
+>>> no=8
+>>> if(no > 10):
+...     print("number greater than 10")
+... else:
+...     print("number less than 10")
+...
+number less than 10
+>>> friends= ["sree","tom","micky","mini"]
+>>> friends[2]
+'micky'
+>>> for name in friends:
+...     print(name)
+...
+sree
+tom
+micky
+mini
+>>> name=input("enter name")
+enter name sree
+>>> print(name)
+ sree
+>>> def cal(no):
+...     if(no>100):
+...             print(no*no)
+...     else:
+...             print(no+no)
+...
+>>> cal(20)
+40
+>>> class product:
+...     def setproduct(self,name,price):
+...             self.name=name
+...             self.price=price
+...     def getproduct(self):
+...             print(self.name)
+...             print(self.price)
+...
+>>> prd=product()
+>>> prd.setproduct('kikat',30)
+>>> prd.getproduct()
+kikat
+30
+>>> from math import *
+>>> a=pi
+>>> print(a)
+3.141592653589793

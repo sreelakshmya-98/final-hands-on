@@ -1,0 +1,60 @@
+D:\final handson>git init
+Initialized empty Git repository in D:/final handson/.git/
+
+D:\final handson>git add .
+
+D:\final handson>git commit -am "simplewhale"
+[master (root-commit) e4c4165] simplewhale
+ 5 files changed, 63 insertions(+)
+ create mode 100644 CI CD/Dockerfile
+ create mode 100644 CI CD/README.md
+ create mode 100644 CI CD/static/index.html
+ create mode 100644 CI CD/static/waves-tiled.png
+ create mode 100644 CI CD/static/whale300.png
+
+D:\final handson>git remote add origin https://github.com/sreelakshmya-98/final-hands-on.git
+
+D:\final handson>git branch -M main
+
+D:\final handson>git push -u origin main
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (9/9), 89.13 KiB | 2.62 MiB/s, done.
+Total 9 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/sreelakshmya-98/final-hands-on.git
+ * [new branch]      main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+
+D:\final handson>git remote add origin https://github.com/sreelakshmya-98/final-hands-on.git
+error: remote origin already exists.
+
+D:\final handson>
+D:\final handson>git remote rm origin
+
+D:\final handson>git remote add origin https://github.com/sreelakshmya-98/final-hands-on.git
+
+D:\final handson>git fetch origin main
+remote: Enumerating objects: 20, done.
+remote: Counting objects: 100% (20/20), done.
+remote: Compressing objects: 100% (12/12), done.
+remote: Total 19 (delta 2), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (19/19), 4.53 KiB | 21.00 KiB/s, done.
+From https://github.com/sreelakshmya-98/final-hands-on
+ * branch            main       -> FETCH_HEAD
+ * [new branch]      main       -> origin/main
+
+D:\final handson>git push --force origin main
+Enumerating objects: 1, done.
+Counting objects: 100% (1/1), done.
+Writing objects: 100% (1/1), 190 bytes | 95.00 KiB/s, done.
+Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/sreelakshmya-98/final-hands-on.git
+ + 6e7ed6e...5b400fa main -> main (forced update)
+D:\final handson>git branch
+* main
+
+D:\final handson>git status
+On branch main
+nothing to commit, working tree clean
