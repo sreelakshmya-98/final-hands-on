@@ -11,8 +11,6 @@ spec:
     command: ["ping","8.8.8.8"]
 
 PS D:\kubernet> kubectl apply -f pod.yaml
-Unable to connect to the server: context deadline exceeded (Client.Timeout exceeded while awaiting headers)
-PS D:\kubernet> kubectl apply -f pod.yaml
 pod/demo created
 PS D:\kubernet> kubectl get pods
 NAME   READY   STATUS    RESTARTS   AGE

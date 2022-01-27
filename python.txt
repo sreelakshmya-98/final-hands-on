@@ -2,10 +2,14 @@ ubuntu@DESKTOP-GO7EFQ4:~$ python3
 Python 3.8.10 (default, Jun  2 2021, 10:49:15)
 [GCC 9.4.0] on linux
 Type "help", "copyright", "credits" or "license" for more information.
+>>> "helloo"
+'helloo'
 >>> 12+9
 21
 >>> 4/2
 2.0
+>>> 3*7
+21
 >>> name = "sree"
 >>> id = "1234"
 >>> print("name " +name+ " id " +str(id))
@@ -56,3 +60,14 @@ kikat
 >>> a=pi
 >>> print(a)
 3.141592653589793
+>>> print(sqrt(64))
+8.0
+>>> print(pow(2,3))
+8.0
+>>> print(round(89.678))
+90
+>>> print(floor(990.999))
+990
+>>> print(ceil(90.0001))
+91
+>>> exit()
